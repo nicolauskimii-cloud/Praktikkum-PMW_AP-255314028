@@ -1,0 +1,65 @@
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+
+
+body{
+    background-image: url(https://i.pinimg.com/1200x/d2/ad/7c/d2ad7c4f537e1f8919cf419f60e04283.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left ;
+    background-attachment: fixed;
+    background-color: #000000;
+    margin: 0;
+    padding: 20px;
+}
+
+header{
+    background-color:  rgb(246, 238, 238);
+    color: rgb(23, 21, 21);
+    text-align: center;
+    padding: 30px;
+}
+
+main{
+    padding: 20px;
+    border: 5px solid rgb(246, 238, 238);
+}
+
+article{
+    font-size: large;
+    text-align: left center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 5px solid  rgb(246, 238, 238);
+}
+
+section{
+    font-size: xx-large;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 20px solid  rgb(246, 238, 238);
+}
+
+p{
+    color:  rgb(246, 238, 238);
+}
+a{
+    font-size: xx-large;
+}
+
+
+table, th, td{
+    border: 1px solid  rgb(246, 238, 238);
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: center;
+    color:  rgb(246, 238, 238);
+}
+
+
+

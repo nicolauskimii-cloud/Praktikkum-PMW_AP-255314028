@@ -1,0 +1,179 @@
+Praktikkum 6
+Nama :Nicolaus Kimi Haryoyudo 
+NIM  : 255314028
+
+Praktikkum_6.html link
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikkum 6</title>
+    <link rel="stylesheet" href="praktikkum_6.css">
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <h1>Formulir Data Diri</h1>
+    <h2>A. Data Calon Mahasiswa dan Orangtua/Wali</h2>
+    <form id="myForm">
+        <label for="name" cols="50">Nama Lengkap(sesuai dengan STTB/STK):</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Nomor Telepon:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" required><br><br>
+
+        <label for="parents" cols="50">Nama Orangtua(sesuai dengan STTB/STK):</label>
+        <input type="text" id="parents" name="parents" required><br><br>
+
+        <label for="age">Umur:</label>
+        <input type="number" id="age" name="age" min="1" max="120" required><br><br>
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="laki-laki" name="jenis_kelamin" value="laki-laki">
+        <label for="laki-laki">Laki-laki</label>
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan">
+        <label for="perempuan">Perempuan</label><br><br>
+
+
+        <label>Status Perkawinan:</label>
+        <input type="radio" id="menikah" name="status_perkawinan" value="menikah">
+        <label for="menikah">Menikah</label>
+        <input type="radio" id="belum-menikah" name="status_perkawinan" value="belum-menikah">
+        <label for="belum-menikah">Belum Menikah</label>
+        <input type="radio" id="biarawan-biarawati" name="status_perkawinan" value="biarawan-biarawati">
+        <label for="biarawan-biarawati">Biarawan/Biarawati</label><br><br>
+
+        <label>Agama:</label> 
+        <input type="radio" id="islam" name="agama" value="islam">
+        <label for="islam">Islam</label>
+        <input type="radio" id="kristen" name="agama" value="kristen">
+        <label for="kristen">Kristen</label>
+        <input type="radio" id="katolik" name="agama" value="katolik">
+        <label for="katolik">Katolik</label><br>
+        <input type="radio" id="hindu" name="agama" value="hindu">
+        <label for="hindu">Hindu</label>
+        <input type="radio" id="budha" name="agama" value="budha">
+        <label for="budha">Budha</label>
+        <input type="radio" id="konghucu" name="agama" value="konghucu">
+        <label for="konghucu">Konghucu</label>
+        <input type="radio" id="yahudi" name="agama" value="yahudi">
+        <label for="yahudi">Yahudi</label>
+        <input type="radio" id="atheis" name="agama" value="atheis">
+        <label for="atheis">Atheis</label><br><br>
+
+        <label>Kewarganegaraan:</label>
+        <input type="radio" id="WNI" name="kewarganegaraan" value="WNI">
+        <label for="WNI">Warga Negara Indonesia</label>
+        <input type="radio" id="WNA" name="kewarganegaraan" value="WNA">
+        <label for="WNA">Warga Negara Asing</label><br><br>
+        
+        <label for="provinsi">Provinsi: </label>
+        <input type="text" id="provinsi" name="provinsi" required><br><br>
+
+        <label for="address">Alamat Asal:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        <label for="city">Kabupaten/Kota:</label>
+        <input type="text" id="city" name="city" required><br><br>
+        <label for="postal_code">Kode Pos:</label>
+        <input type="text" id="postal_code" name="postal_code" pattern="[0-9]{5}" required><br><br>
+
+        <label for="education">Pendidikan Terakhir:</label>
+        <select id="education" name="education" required>
+            <option value="">--Pilih Pendidikan--</option>
+            <option value="sd">SD</option>
+            <option value="smp">SMP</option>
+            <option value="sma">SMA</option>
+            <option value="d3">D3</option>
+            <option value="s1">S1</option>
+            <option value="s2">S2</option>
+            <option value="s3">S3</option>
+        </select><br><br>
+        <label for="alamat-surat">Alamat Surat:</label>
+        <input type="text" id="alamat-surat" name="alamat-surat" required><br><br>
+        
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <div id="result"></div>
+</body>
+</html>
+
+form.js
+function jenisKelamin() {
+    var lakiLaki = document.getElementById("laki-laki");
+    var perempuan = document.getElementById("perempuan");
+    var hasil = document.getElementById("hasil");
+}
+function status() {
+    var menikah = document.getElementById("menikah");
+    var belumMenikah = document.getElementById("belum-menikah");
+    var biarawan = document.getElementById("biarawan-biarawati");
+    var hasil = document.getElementById("hasil");
+}
+function agama() {
+    var islam = document.getElementById("islam");
+    var kristen = document.getElementById("kristen");
+    var katolik = document.getElementById("katolik");
+    var hindu = document.getElementById("hindu");
+    var budha = document.getElementById("budha");
+    var konghucu = document.getElementById("konghucu");
+    var yahudi = document.getElementById("yahudi");
+    var atheis = document.getElementById("atheis");
+    var hasil = document.getElementById("hasil");
+}
+function kewarganegaraan() {
+    var indonesia = document.getElementById("WNI");
+    var asing = document.getElementById("WNA");
+    var hasil = document.getElementById("hasil");
+}
+
+function pendidikan() {
+    var sd = document.getElementById("sd");
+    var smp = document.getElementById("smp");
+    var sma = document.getElementById("sma");
+    var d3 = document.getElementById("d3"); 
+    var sma = document.getElementById("sma");
+    var d3 = document.getElementById("d3");
+    var s1 = document.getElementById("s1");
+    var s2 = document.getElementById("s2");
+    var s3 = document.getElementById("s3");
+    var hasil = document.getElementById("hasil");
+}
+
+const provinsi = document.getElementById("provinsi");
+if(provinsi){
+    provinsi.addEventListener("input", function(){
+        if (provinsi.validity.valid) {
+            provinsi.setCustomValidity("");
+        }else{
+            provinsi.setCustomValidity("Provinsi harus diisi");
+        }
+    });
+}
+
+const alamat = document.getElementById("address");
+if (alamat) {
+    alamat.addEventListener("input", function() {
+        if (alamat.validity.valid) {
+            alamat.setCustomValidity("");
+        } else {
+            alamat.setCustomValidity("Alamat harus diisi.");
+        }
+    });
+}
+
+const alamatSurat = document.getElementById("alamat-surat");
+if (alamatSurat) {
+    alamatSurat.addEventListener("input", function() {
+        if (alamatSurat.validity.valid) {
+            alamatSurat.setCustomValidity("");
+        } else {
+            alamatSurat.setCustomValidity("Alamat surat harus diisi.");
+        }
+    });
+}
+
